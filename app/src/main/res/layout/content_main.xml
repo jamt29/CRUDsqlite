@@ -32,6 +32,7 @@
             android:textAlignment="center"
             android:textColor="@color/title"/>
         <EditText
+            android:drawableLeft="@drawable/ic_qr"
             android:id="@+id/et_codigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +45,7 @@
             android:textSize="20dp"
             android:textColor="@color/title"/>
         <EditText
+            android:drawableLeft="@drawable/face"
             android:id="@+id/et_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,6 +58,7 @@
             android:textSize="20dp"
             android:textColor="@color/title"/>
         <EditText
+            android:drawableLeft="@drawable/ic_money"
             android:id="@+id/et_precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,14 +68,14 @@
 
 
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center">
 
             <Button
-                android:id="@+id/btn_guardar"
+                android:id="@+id/btnguardar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="guardar"
@@ -85,9 +88,9 @@
                 android:text="consulta por codigo"
                 android:textColor="@color/boton"/>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -97,17 +100,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Consulta por descripcion"
+                android:id="@+id/btnconsultar2"
                 android:textColor="@color/boton"
                 android:layout_marginRight="20dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Baja por codigo"
+                android:text="Eliminar"
+                android:id="@+id/btneliminar"
                 android:textColor="@color/boton" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -116,11 +121,35 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modificacion"
+                android:text="Modificar"
+                android:id="@+id/btnmodificar"
                 android:textColor="@color/boton"
                 />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo"
+                android:id="@+id/btnnuevo"
+                android:textColor="@color/boton"
+                android:layout_marginRight="20dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salir"
+                android:id="@+id/btnsalir"
+                android:textColor="@color/boton" />
+
+        </LinearLayout>
 
 
     </LinearLayout>

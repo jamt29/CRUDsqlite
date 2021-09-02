@@ -17,11 +17,18 @@ import com.itca.crud_sqlite.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+
+    private EditText et_codigo, et_descripcion, et_precio;
+    private Button btnguardar, btnconsultar1, btnconsultar2, btneliminar, btnmodificar, btnnuevo, btnsalir;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,22 @@ public class MainActivity extends AppCompatActivity {
        /* NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration); */
+
+
+        et_codigo = (EditText) findViewById(R.id.et_codigo);
+        et_descripcion = (EditText) findViewById(R.id.et_descripcion);
+        et_precio = (EditText) findViewById(R.id.et_precio);
+
+        btnguardar = (Button) findViewById(R.id.btnguardar);
+        btnconsultar1 = (Button) findViewById(R.id.btnconsultar1);
+        btnconsultar2 = (Button) findViewById(R.id.btnconsultar2);
+        btneliminar = (Button) findViewById(R.id.btneliminar);
+        btnmodificar = (Button) findViewById(R.id.btnmodificar);
+        btnnuevo = (Button) findViewById(R.id.btnnuevo);
+        btnsalir = (Button) findViewById(R.id.btnsalir);
+
+
+
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +88,35 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+
+            case R.id.btnguardar:
+                Toast.makeText(this, "Has hecho click en el boton guardar", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.btnconsultar1:
+                Toast.makeText(this, "Has hecho click en el boton Consulta por codigo", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnconsultar2:
+                Toast.makeText(this, "Has hecho click en el boton Consulta por descripcion", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btneliminar:
+                Toast.makeText(this, "Has hecho click en el boton eliminar", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnmodificar:
+                Toast.makeText(this, "Has hecho click en el boton modificar", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnnuevo:
+                Toast.makeText(this, "Has hecho click en el boton nuevo", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnsalir:
+                Toast.makeText(this, "Has hecho click en el boton salir", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
     }
 }
 
