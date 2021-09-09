@@ -79,13 +79,16 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="guardar"
+            android:onClick="onClick"
             android:textColor="@color/boton"
             android:layout_marginRight="20dp"/>
         <Button
             android:id="@+id/btnconsultar1"
+            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="consulta por codigo"
+
             android:textColor="@color/boton"/>
 
     </LinearLayout>
@@ -100,6 +103,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Consulta por descripcion"
+            android:onClick="onClick"
             android:id="@+id/btnconsultar2"
             android:textColor="@color/boton"
             android:layout_marginRight="20dp"/>
@@ -107,6 +111,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Eliminar"
+            android:onClick="onClick"
             android:id="@+id/btneliminar"
             android:textColor="@color/boton" />
 
@@ -122,6 +127,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Modificar"
+            android:onClick="onClick"
             android:id="@+id/btnmodificar"
             android:textColor="@color/boton"
             />
@@ -138,6 +144,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nuevo"
+            android:onClick="onClick"
             android:id="@+id/btnnuevo"
             android:textColor="@color/boton"
             android:layout_marginRight="20dp"
@@ -146,6 +153,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Salir"
+            android:onClick="onClick"
             android:id="@+id/btnsalir"
             android:textColor="@color/boton" />
 
