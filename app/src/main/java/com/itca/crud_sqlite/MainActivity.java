@@ -1,5 +1,6 @@
 package com.itca.crud_sqlite;
 
+import android.content.ContentValues;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -22,6 +23,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this ,"administracion.db",null,1);
+            SQLiteDatabase.bd = admin.getWritableDatabase();
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
@@ -92,10 +96,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        SQLiteDatabase bd = admin.getWritableDatabase();
         switch (view.getId()){
 
             case R.id.btnguardar:
-                Toast.makeText(this, "Has hecho click en el boton guardar", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Has hecho click en el boton guardar", Toast.LENGTH_SHORT).show();
+                String codigo = et_codigo.getText().toString();
+                String descripcion = et_descripcion.getText().toString();
+                String precio = et_precio.getText().toString();
+                ContentValues registro = new ContentValues();
+                registro.put("codigo",codigo)
+
             break;
             case R.id.btnconsultar1:
                 Toast.makeText(this, "Has hecho click en el boton Consulta por codigo", Toast.LENGTH_SHORT).show();

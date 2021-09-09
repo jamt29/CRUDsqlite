@@ -1,171 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="REGISTRO DE PRODUCTOS"
-            android:textSize="25dp"
-            android:textColor="@color/red"
-            android:layout_marginBottom="20dp"/>
+        android:theme="@style/Theme.CRUDSqlite.AppBarOverlay">
 
-        <ImageView
-            android:layout_width="288dp"
-            android:layout_height="131dp"
-            android:src="@drawable/car"
-            android:layout_marginBottom="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Codigo del Articulo:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:textColor="@color/title"/>
-        <EditText
-            android:drawableLeft="@drawable/ic_qr"
-            android:id="@+id/et_codigo"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Codigo"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descripcion:"
-            android:textSize="20dp"
-            android:textColor="@color/title"/>
-        <EditText
-            android:drawableLeft="@drawable/face"
-            android:id="@+id/et_descripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Descripcion"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Precio:"
-            android:textSize="20dp"
-            android:textColor="@color/title"/>
-        <EditText
-            android:drawableLeft="@drawable/ic_money"
-            android:id="@+id/et_precio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="Precio"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.CRUDSqlite.PopupOverlay" />
 
+    </com.google.android.material.appbar.AppBarLayout>
 
+    <include layout="@layout/content_main" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btnguardar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="guardar"
-                android:textColor="@color/boton"
-                android:layout_marginRight="20dp"/>
-            <Button
-                android:id="@+id/btnconsultar1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="consulta por codigo"
-                android:textColor="@color/boton"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Consulta por descripcion"
-                android:id="@+id/btnconsultar2"
-                android:textColor="@color/boton"
-                android:layout_marginRight="20dp"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Eliminar"
-                android:id="@+id/btneliminar"
-                android:textColor="@color/boton" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Modificar"
-                android:id="@+id/btnmodificar"
-                android:textColor="@color/boton"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nuevo"
-                android:id="@+id/btnnuevo"
-                android:textColor="@color/boton"
-                android:layout_marginRight="20dp"
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Salir"
-                android:id="@+id/btnsalir"
-                android:textColor="@color/boton" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
-   <!--- <fragment
-        android:id="@+id/nav_host_fragment_content_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />-->
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
